@@ -20,6 +20,7 @@
         </activity>
         <activity android:name=".ConnexionActivity" />
         <activity android:name=".MenuActivity" />
+        <activity android:name=".NewBillActivity" />
     </application>
 
 </manifest>

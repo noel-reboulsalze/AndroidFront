@@ -11,25 +11,43 @@
         android:layout_margin="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="btn1"/>
+        android:visibility="gone"
+        android:text="Creer une note de frais "/>
 
     <Button
         android:id="@+id/btn2"
         android:layout_margin="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="btn2"/>
+        android:visibility="gone"
+        android:text="Historique"/>
 
     <Button
         android:id="@+id/btn3"
         android:layout_margin="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="btn3"/>
+        android:visibility="gone"
+        android:text="ajout utilisateur"/>
 
     <Button
-        android:id="@+id/logout"
+        android:id="@+id/btn4"
+        android:layout_margin="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Logout"/>
+        android:visibility="gone"
+        android:text="traiter note de frais"/>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            style="@style/Base.Widget.AppCompat.Toolbar.Button.Navigation"
+            android:id="@+id/logout"
+            android:background="#eee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Logout"/>
+    </android.support.v7.widget.LinearLayoutCompat>
 </LinearLayout>

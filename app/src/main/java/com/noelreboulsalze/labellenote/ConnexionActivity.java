@@ -61,6 +61,7 @@ public class ConnexionActivity extends AppCompatActivity{
 
                     currentUser.setLogin(user.getLogin());
                     currentUser.setType(user.getType());
+                    currentUser.setId(user.getId());
                     currentUser.logs();
 
 

@@ -41,8 +41,18 @@ public class CurrentUser {
 
     public String getLogin() { return sharedPreferences.getString("LOGIN", null); }
 
+
+    public void setId(String id) {
+        editor = sharedPreferences.edit();
+        editor.putString("ID", id);
+        editor.apply();
+    }
+
+    public String getId() { return sharedPreferences.getString("ID", null); }
+
     public void logs() {
         Log.i("### CURENT_USER", getLogin());
         Log.i("### CURENT_USER", getType());
+        Log.i("### CURENT_USER", getId());
     }
 }
