@@ -38,22 +38,22 @@ public class HistoryActivity extends AppCompatActivity{
 
         currentUser = new CurrentUser(this);
         connectionInterface = ApiClient.getClient().create(ConnectionInterface.class);
-        HistoryAdapter history = new HistoryAdapter(this, histories);
-        recyclerView.setAdapter(history);
+        HistoryAdapter historyAdapter = new HistoryAdapter(this, histories);
+        recyclerView.setAdapter(historyAdapter);
 
         connectionInterface.getHistory(currentUser.getId()).enqueue(new Callback<List<History>>() {
             @Override
             public void onResponse(Call<List<History>> call, Response<List<History>> response) {
-                for (History history1 : response.body()) {
+                for (History history : response.body()) {
                     histories.add(new History(
-                            history1.getTotal_frais(),
-                            history1.getId_demande(),
-                            history1.getCreation_note(),
-                            history1.getState()
+                            history.getTotal_frais(),
+                            history.getId_demande(),
+                            history.getCreation_note(),
+                            history.getState()
                     ));
                 }
-                history.notifyDataSetChanged();
-                Log.i("### INFO", String.valueOf(history.getItemCount()));
+                historyAdapter.notifyDataSetChanged();
+                Log.i("### INFO", String.valueOf(historyAdapter.getItemCount()));
             }
 
             @Override

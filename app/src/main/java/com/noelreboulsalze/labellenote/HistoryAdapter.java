@@ -24,6 +24,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
     public HistoryAdapter(Context context, List<History> histories) {
         this.context = context;
         this.histories = histories;
+        this.mInflater = LayoutInflater.from(context);
     }
 
     @Override
@@ -40,11 +41,10 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
          History history = histories.get(position);
-         Log.i("###", history.getCreation_note());
 
-         holder.creationNote.setText(history.getCreation_note());
-         holder.price.setText(history.getTotal_frais());
-         holder.state.setText(history.getState());
+         holder.creationNote.setText("Date : " + history.getCreation_note());
+         holder.price.setText(history.getTotal_frais() + " €");
+         holder.state.setText("Etat : " + history.getState());
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
