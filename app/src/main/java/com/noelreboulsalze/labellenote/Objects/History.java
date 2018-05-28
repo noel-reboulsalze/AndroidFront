@@ -4,21 +4,21 @@ package com.noelreboulsalze.labellenote.Objects;
  * Created by ysiguman on 28/05/18.
  */
 
-public class history {
+public class History {
 
     private String total_frais;
     private String id_demande;
     private String creation_note ;
     private String etat;
 
-    public history() {
+    public History() {
     }
 
-    public history(String total_frais, String id_demande, String creation_note, String etat) {
+    public History(String total_frais, String id_demande, String creation_note, String state) {
         this.total_frais = total_frais;
         this.id_demande = id_demande;
         this.creation_note = creation_note;
-        this.etat = etat;
+        this.etat = state;
     }
 
     public String getTotal_frais() {
@@ -45,11 +45,11 @@ public class history {
         this.creation_note = creation_note;
     }
 
-    public String getEtat() {
+    public String getState() {
         return etat;
     }
 
-    public void setEtat(String etat) {
-        this.etat = etat;
+    public void setState(String state) {
+        this.etat = state;
     }
 }

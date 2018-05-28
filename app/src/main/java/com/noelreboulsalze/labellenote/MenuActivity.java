@@ -49,7 +49,8 @@ public class MenuActivity extends AppCompatActivity {
             startActivity(intent);
         });
         btn2.setOnClickListener(view -> {
-
+            Intent intent = new Intent(MenuActivity.this, HistoryActivity.class);
+            startActivity(intent);
         });
         btn3.setOnClickListener(view -> {
 
